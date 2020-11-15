@@ -1,0 +1,148 @@
+.header {
+    position: fixed;
+    background: #fff;
+    width: 100%;
+    z-index: 100;
+    border-radius: 5px 0;
+}
+
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-menu-list {
+    display: none;
+    margin-bottom: 250px;
+}
+
+
+.header-burger {
+    border: none;
+    background: url("../images/icon-hamburger.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    &:hover,
+    &:focus,
+    &:active {
+        border: none;
+    }
+}
+
+.header.active {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #252a42;
+    opacity: 0.9;
+
+    .header-burger {
+        background: url("../images/icon-close.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-right: 20px;
+    }
+
+    .header-menu-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 200px;
+    }
+
+    li:first-of-type {
+        margin-top: 100px;
+    }
+    li {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    li::before {
+        display: block;
+        content: "";
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        content: "";
+        height: 1px;
+        width: 200px;
+        background: #aaa;
+        margin-bottom: 20px;
+        opacity: 0.5;
+    }
+
+    li a {
+        color: #eee;
+    }
+}
+
+.header-icons {
+    display: flex;
+    width: 150px;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-icons a {
+    height: 30px;
+    width: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.logo-facebook {
+    background: url(../images/icon-facebook.svg);
+}
+
+.logo-twitter {
+    background: url(../images/icon-twitter.svg);
+}
+
+
+@media (min-width: 800px) {
+    .header .container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .header-menu-list {
+        display: flex;
+        justify-content: space-between;
+        width: 500px;
+        margin-bottom: 0;
+    }
+
+    .header-menu-list li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 150px;
+        &:active {
+            border: 3px solid $color3;
+            border-radius: 5px;
+            a {
+                color: $color3;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .header-menu-list li a {
+        &:hover {
+            color: $color3;
+        }
+    }
+
+    .header-burger {
+        display: none;
+    }
+}

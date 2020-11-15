@@ -1,0 +1,56 @@
+.faq .container {
+    max-width: 600px;
+    text-align: center;
+}
+
+.faq-main {
+    font-size: 14px;
+}
+
+.faq-question::after {
+    display: block;
+    content: "";
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    content: "";
+    height: 1px;
+    width: 100%;
+    background: #aaa;
+    margin-bottom: 20px;
+}
+
+.faq-question div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq-question button {
+    height: 11px;
+    width: 18px;
+    background: url("../images/icon-arrow.svg");
+    transition: all ease-in-out 150ms;
+    
+}
+
+.faq-question button.active {
+    background: url("../images/icon-arrow-red.svg");
+    transform-origin: center;
+    transform: rotate(180deg)
+}
+
+.faq-question h3 {
+    font-size: 14px;
+    text-align: left;
+    color: #333;
+
+    &:hover {
+        color: $color3;
+        cursor: pointer;
+    }
+}
+
+.faq-question p {
+    text-align: left;
+    font-size: 14px;
+}
